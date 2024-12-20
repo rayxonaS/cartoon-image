@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  max-width: 1900px;
+  height: 100vh;
+  background-image: url(https://variety.com/wp-content/uploads/2014/04/01-avengers-2012.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 800px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url(https://c.files.bbci.co.uk/D1E0/production/_106082735_mediaitem106082731.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 30px solid brown;
+}
+
+.buttons {
+  margin-bottom: 600px;
+}
+
+.light-btn {
+  font-size: 40px;
+  color: black;
+  background-color: white;
+}
+
+.light-btn:hover + window {
+  border: 30px solid black;
+  background-color: white;
+}
+
+.dark-btn {
+  font-size: 40px;
+  color: white;
+  background-color: black;
+}
+
+.container .dark-btn:hover ~ .left-window {
+  border: 30px solid white;
+  background-color: black;
+}
+
+.container .dark-btn:hover ~ .right-window {
+  border: 30px solid white;
+  background-color: black;
+}
+
+.window {
+  width: 400px;
+  height: 450px;
+  border: 30px solid black;
+  background-color: white;
+  transition: 2s ease;
+}
+
+.window:first-child {
+  transform-origin: left top;
+  transform-origin: left center;
+}
+
+.window:last-child {
+  transform-origin: right top;
+  transform-origin: right center;
+}
+
+.container:hover > .left-window {
+  transform: perspective(1000px) rotateY(75deg);
+}
+
+.container:hover > .right-window {
+  transform: perspective(1000px) rotateY(-75deg);
+}
